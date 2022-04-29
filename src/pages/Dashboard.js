@@ -22,8 +22,8 @@ const Dashboard = () => {
 			owner: "Silvia Balsa",
 			avatar:
 				"https://gravatar.com/avatar/3e792514cbcf08c79032cb49c5c213f8?s=400&d=robohash&r=x",
-			status: "undone",
-			priority: 7,
+			status: "stuck",
+			priority: 3,
 			progress: 60,
 			description: "Lorem Ipsum por la gloria de tu padre",
 			timestamps: "2022/02/11T:07:45:17+0000",
@@ -36,8 +36,8 @@ const Dashboard = () => {
 			avatar:
 				"https://gravatar.com/avatar/b43cd049ac5ec1a6b9cf1e742da1891e?s=400&d=robohash&r=x",
 			status: "in-progress",
-			priority: 9,
-			progress: 90,
+			priority: 1,
+			progress: 10,
 			description: "Lorem Ipsum por la gloria de tu padre",
 			timestamps: "2022/03/11T:07:36:17+0000",
 		},
@@ -52,12 +52,12 @@ const Dashboard = () => {
 	return (
 		<div className="dashboard">
 			<h1>
-				My Project
+				My tasks
 				<div className="ticket-container">
 					{tickets &&
 						uniqueCategories?.map((uniqueCategory, categoryIndex) => (
 							<div key={categoryIndex}>
-								<h3>{uniqueCategory}</h3>
+								<h3>Category: {uniqueCategory}</h3>
 								{tickets
 									?.filter((ticket) => ticket.category === uniqueCategory)
 									.map((filteredTicket, _index) => (

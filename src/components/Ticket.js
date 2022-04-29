@@ -13,8 +13,8 @@ const Ticket = ({ color, ticket }) => {
 					<h3>{ticket.title}</h3>
 					<Avatar ticket={ticket} />
 					<Status status={ticket.status} />
-					<Priority />
-					<Progress />
+					<Priority priority={ticket.priority} />
+					<Progress progress={ticket.progress} />
 				</Link>
 				<DeleteBlock />
 			</div>

@@ -10,7 +10,7 @@ const Status = ({ status }) => {
 			case "in-progress":
 				color = "orange";
 				break;
-			case "undone":
+			case "stuck":
 				color = "red";
 				break;
 			default:

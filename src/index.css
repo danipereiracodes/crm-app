@@ -9,6 +9,12 @@ html, body {
     display:flex;
 }
 
+#link {
+    text-decoration:none;
+    color:black;
+    
+}
+
 /***** nav ******/
 
 nav {
@@ -18,6 +24,7 @@ text-align:center;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+width:150px;
 
 }
 
@@ -29,7 +36,8 @@ flex-direction:column;
 }
 
 nav .logo-container {
-    width:10px;
+    background-color: white;
+    border: 2px solid blue;
 }
 
 nav .icon {
@@ -41,6 +49,7 @@ nav .icon {
 .dashboard {
     padding:30px;
     width:100%;
+    
 }
 
 .dashboard .ticket-container {
@@ -92,4 +101,51 @@ nav .icon {
 
 .ticket-card .image-container img {
     width:100%;
+}
+
+.ticket-card .status-display {
+    display:flex;
+    justify-content:center;
+}
+
+.ticket-card .priority-display {
+    display:flex;
+    justify-content:center;
+
+}
+
+.ticket-card .priority-display .star-container  {
+    display:flex;
+   
+    
+
+}
+
+.ticket-card .priority-display .star-container h3  {
+    padding:0;
+    margin:7px;
+   
+    
+    
+}
+
+.ticket-card .progress-display {
+    min-width:200px;
+    background-color:yellow;
+    
+
+}
+
+.ticket-card .progress-bar {
+    width:100%;
+    height:30px;
+    background-color:grey;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.ticket-card .progress-bar .progress-indicator {
+    background-color:brown;
+
+
 }
