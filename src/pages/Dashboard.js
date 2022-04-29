@@ -1,6 +1,14 @@
 import Ticket from "../components/Ticket";
+import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
 
 const Dashboard = () => {
+	const [tickets, setTickets] = useState(null);
+
+	useEffect(async () => {
+		const response = await axios.get("http://localhost:8000/tickets");
+	}, []);
+
 	const tickets = [
 		{
 			category: "Work",

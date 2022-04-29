@@ -149,3 +149,50 @@ nav .icon {
 
 
 }
+
+
+/*----Ticket page------*/
+
+.ticket {
+    padding:30px;
+    width:100%;
+
+}
+
+.ticket .ticket-container {
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
+
+.ticket form {
+    display:flex;
+
+}
+
+.ticket form section{
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+    width:500px;
+    
+}
+
+.ticket form label {
+    margin:20px 0 0 0;
+}
+
+.ticket form select, 
+.ticket form input {
+    padding:10px;
+    font-size:15px;
+    border-radius:10px;
+    margin:5px;
+    border:1.5px solid grey;
+
+}
+
+.ticket form  .multiple-input-container {
+margin: 20px 0 20px 0;
+}
