@@ -16,7 +16,7 @@ const Ticket = ({ color, ticket }) => {
 					<Priority priority={ticket.priority} />
 					<Progress progress={ticket.progress} />
 				</Link>
-				<DeleteBlock />
+				<DeleteBlock documentId={ticket.documentId} />
 			</div>
 		</div>
 	);
