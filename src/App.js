@@ -17,7 +17,7 @@ const App = () => {
 						<Route path="/ticket" element={<TicketPage />} />
 						<Route
 							path="/ticket/:id"
-							element={<TicketPage editmode={true} />}
+							element={<TicketPage editMode={true} />}
 						/>
 					</Routes>
 				</BrowserRouter>

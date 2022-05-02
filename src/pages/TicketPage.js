@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import CategoriesContext from "../context";
 
-const TicketPage = () => {
+const TicketPage = ({ editMode }) => {
+	let { id } = useParams();
+
 	const [formData, setFormData] = useState({
 		status: "not started",
 		progress: 0,
@@ -12,10 +14,18 @@ const TicketPage = () => {
 	const navigate = useNavigate();
 	const { categories, setCategories } = useContext(CategoriesContext);
 
-	const editMode = false;
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		if (editMode) {
+			const response = await axios.put(`http://localhost:8000/tickets/${id}`, {
+				data: formData,
+			});
+			const success = response.status === 200;
+			if (success) {
+				navigate("/");
+			}
+		}
 
 		if (!editMode) {
 			const response = await axios.post("http://localhost:8000/tickets", {
@@ -85,7 +95,6 @@ const TicketPage = () => {
 							name="category"
 							type="text"
 							onChange={handleChange}
-							required={true}
 							value={formData.category}
 						/>
 						<label>Priority</label>
@@ -181,7 +190,7 @@ const TicketPage = () => {
 								</select>
 							</>
 						)}
-						<input type="submit" />
+						<button type="submit" />
 					</section>
 					<section>
 						<label htmlFor="owner">Owner</label>
